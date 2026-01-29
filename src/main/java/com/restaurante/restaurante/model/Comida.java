@@ -1,18 +1,18 @@
-package com.restaurante.restaurante;
+package com.restaurante.restaurante.model;
 
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter @Setter
-public class ComidaRestaurante {
+public class Comida {
 
     private Long id;
     private String descripcion;
     private Double costo;
 
-    public ComidaRestaurante() {}
+    public Comida() {}
 
-    public ComidaRestaurante(Long id, String descripcion, Double costo) {
+    public Comida(Long id, String descripcion, Double costo) {
         this.id = id;
         this.descripcion = descripcion;
         this.costo = costo;

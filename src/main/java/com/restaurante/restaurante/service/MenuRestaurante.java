@@ -1,5 +1,6 @@
-package com.restaurante.restaurante;
+package com.restaurante.restaurante.service;
 
+import com.restaurante.restaurante.model.Comida;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,16 +11,16 @@ import java.util.Objects;
 @Getter @Setter
 public class MenuRestaurante {
 
-    private final List<ComidaRestaurante> comidas = new ArrayList<>();
+    private final List<Comida> comidas = new ArrayList<>();
 
     public MenuRestaurante() {}
 
-    public void añadirComida(ComidaRestaurante comidaRestaurante) {
+    public void añadirComida(Comida comidaRestaurante) {
         this.comidas.add(comidaRestaurante);
     }
 
-    public ComidaRestaurante buscarComidaPorId(Long id) {
-        for (ComidaRestaurante comida : this.comidas) {
+    public Comida buscarComidaPorId(Long id) {
+        for (Comida comida : this.comidas) {
             if (Objects.equals(comida.getId(), id)) {
                 return comida;
             }
